@@ -1,0 +1,14 @@
+spring:
+  application:
+    name: ${SERVICE_NAME}
+  datasource:
+    url: ${DB_URL}
+    username: ${DB_USERNAME}
+    password: ${DB_PASSWORD}
+    driver-class-name: org.postgresql.Driver
+  flyway:
+    enabled: true
+    baseline-on-migrate: true
+    callback-locations: classpath:db/migration
+  jooq:
+    sql-dialect: postgres

@@ -2,12 +2,14 @@
 <project version="4">
   <component name="CompilerConfiguration">
     <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
       <profile name="Maven default annotation processors profile" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="api-gateway" />
         <module name="discovery-server" />
+        <module name="proto" />
       </profile>
       <profile name="Annotation profile for audit-service" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
@@ -21,16 +23,18 @@
         <module name="account-service" />
         <module name="audit-service" />
         <module name="transfer-service" />
-        <module name="ledger-service" />
       </profile>
-      <profile name="Annotation profile for common-service" enabled="true">
+      <profile name="Annotation profile for ledger-service" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <processorPath useClasspath="false">
           <entry name="$MAVEN_REPOSITORY$/org/projectlombok/lombok/1.18.42/lombok-1.18.42.jar" />
+          <entry name="$MAVEN_REPOSITORY$/org/mapstruct/mapstruct-processor/1.6.3/mapstruct-processor-1.6.3.jar" />
+          <entry name="$MAVEN_REPOSITORY$/org/mapstruct/mapstruct/1.6.3/mapstruct-1.6.3.jar" />
         </processorPath>
-        <module name="common-service" />
+        <module name="ledger-service" />
+        <module name="common-lib" />
       </profile>
     </annotationProcessing>
   </component>
@@ -40,9 +44,10 @@
       <module name="api-gateway" options="-parameters" />
       <module name="audit-service" options="-parameters" />
       <module name="auth-service" options="-parameters" />
-      <module name="common-service" options="-parameters" />
+      <module name="common-lib" options="-parameters" />
       <module name="discovery-server" options="-parameters" />
       <module name="ledger-service" options="-parameters" />
+      <module name="proto" options="-parameters" />
       <module name="transfer-service" options="-parameters" />
     </option>
   </component>

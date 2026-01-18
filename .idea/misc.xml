@@ -12,6 +12,8 @@
         <option value="$PROJECT_DIR$/audit-service/pom.xml" />
         <option value="$PROJECT_DIR$/api-gateway/pom.xml" />
         <option value="$PROJECT_DIR$/common-service/pom.xml" />
+        <option value="$PROJECT_DIR$/proto/pom.xml" />
+        <option value="$PROJECT_DIR$/common-lib/pom.xml" />
       </list>
     </option>
   </component>
